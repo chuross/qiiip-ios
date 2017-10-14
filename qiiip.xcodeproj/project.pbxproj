@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78B7AEEB04B54D356F26E809 /* Pods_qiiip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF66B85270224ACD4BFFB22 /* Pods_qiiip.framework */; };
 		D4E237981F91F1480058C4FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E237971F91F1480058C4FC /* AppDelegate.swift */; };
 		D4E2379A1F91F1480058C4FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E237991F91F1480058C4FC /* ViewController.swift */; };
 		D4E2379D1F91F1480058C4FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E2379B1F91F1480058C4FC /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26CF66ABB6B579E7DC3D221A /* Pods-qiiip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiiip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qiiip/Pods-qiiip.debug.xcconfig"; sourceTree = "<group>"; };
+		4FF66B85270224ACD4BFFB22 /* Pods_qiiip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiiip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9255220648B712EC0DDB81AF /* Pods-qiiip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiiip.release.xcconfig"; path = "Pods/Target Support Files/Pods-qiiip/Pods-qiiip.release.xcconfig"; sourceTree = "<group>"; };
 		D4E237941F91F1480058C4FC /* qiiip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qiiip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E237971F91F1480058C4FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E237991F91F1480058C4FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B7AEEB04B54D356F26E809 /* Pods_qiiip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F5463CA2D84D5B7EFFEE66D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26CF66ABB6B579E7DC3D221A /* Pods-qiiip.debug.xcconfig */,
+				9255220648B712EC0DDB81AF /* Pods-qiiip.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D4E2378B1F91F1480058C4FC = {
 			isa = PBXGroup;
 			children = (
 				D4E237961F91F1480058C4FC /* qiiip */,
 				D4E237951F91F1480058C4FC /* Products */,
+				1F5463CA2D84D5B7EFFEE66D /* Pods */,
+				DD890465C41FE2D2207F1BBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = qiiip;
 			sourceTree = "<group>";
 		};
+		DD890465C41FE2D2207F1BBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FF66B85270224ACD4BFFB22 /* Pods_qiiip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4E237A61F91F1480058C4FC /* Build configuration list for PBXNativeTarget "qiiip" */;
 			buildPhases = (
+				227C10832629377B9EC0D667 /* [CP] Check Pods Manifest.lock */,
 				D4E237901F91F1480058C4FC /* Sources */,
 				D4E237911F91F1480058C4FC /* Frameworks */,
 				D4E237921F91F1480058C4FC /* Resources */,
+				72880E7009EEA8B2EEB81CCD /* [CP] Embed Pods Frameworks */,
+				9D946B5E0FDAFDF2FF796A69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		227C10832629377B9EC0D667 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-qiiip-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72880E7009EEA8B2EEB81CCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-qiiip/Pods-qiiip-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CHQiitaApiClient/CHQiitaApiClient.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHQiitaApiClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qiiip/Pods-qiiip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D946B5E0FDAFDF2FF796A69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-qiiip/Pods-qiiip-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4E237901F91F1480058C4FC /* Sources */ = {
@@ -258,6 +343,7 @@
 		};
 		D4E237A71F91F1480058C4FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26CF66ABB6B579E7DC3D221A /* Pods-qiiip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = qiiip/Info.plist;
@@ -270,6 +356,7 @@
 		};
 		D4E237A81F91F1480058C4FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9255220648B712EC0DDB81AF /* Pods-qiiip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = qiiip/Info.plist;
