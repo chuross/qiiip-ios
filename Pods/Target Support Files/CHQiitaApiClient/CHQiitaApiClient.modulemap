@@ -1,6 +1,0 @@
-framework module CHQiitaApiClient {
-  umbrella header "CHQiitaApiClient-umbrella.h"
-
-  export *
-  module * { export * }
-}
