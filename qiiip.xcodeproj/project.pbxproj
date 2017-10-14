@@ -8,23 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		78B7AEEB04B54D356F26E809 /* Pods_qiiip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF66B85270224ACD4BFFB22 /* Pods_qiiip.framework */; };
+		D40062961F92228D009E4FA9 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */; };
+		D40062981F9222F0009E4FA9 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */; };
 		D4E237981F91F1480058C4FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E237971F91F1480058C4FC /* AppDelegate.swift */; };
-		D4E2379A1F91F1480058C4FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E237991F91F1480058C4FC /* ViewController.swift */; };
-		D4E2379D1F91F1480058C4FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E2379B1F91F1480058C4FC /* Main.storyboard */; };
 		D4E2379F1F91F1480058C4FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E2379E1F91F1480058C4FC /* Assets.xcassets */; };
-		D4E237A21F91F1480058C4FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E237A01F91F1480058C4FC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		26CF66ABB6B579E7DC3D221A /* Pods-qiiip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiiip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qiiip/Pods-qiiip.debug.xcconfig"; sourceTree = "<group>"; };
 		4FF66B85270224ACD4BFFB22 /* Pods_qiiip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiiip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9255220648B712EC0DDB81AF /* Pods-qiiip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiiip.release.xcconfig"; path = "Pods/Target Support Files/Pods-qiiip/Pods-qiiip.release.xcconfig"; sourceTree = "<group>"; };
+		D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = SOURCE_ROOT; };
+		D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		D4E237941F91F1480058C4FC /* qiiip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qiiip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E237971F91F1480058C4FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4E237991F91F1480058C4FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D4E2379C1F91F1480058C4FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4E2379E1F91F1480058C4FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D4E237A11F91F1480058C4FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4E237A31F91F1480058C4FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,36 +53,23 @@
 				D40062931F92031E009E4FA9 /* Applications */,
 				D40062941F920331009E4FA9 /* Ui */,
 			);
-			name = Sources;
 			path = Sources;
 			sourceTree = "<group>";
 		};
 		D40062901F920138009E4FA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D40062911F920239009E4FA9 /* Storyboards */,
 				D40062921F92024D009E4FA9 /* Xibs */,
 				D4E2379E1F91F1480058C4FC /* Assets.xcassets */,
 			);
-			name = Resources;
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		D40062911F920239009E4FA9 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				D4E237A01F91F1480058C4FC /* LaunchScreen.storyboard */,
-				D4E2379B1F91F1480058C4FC /* Main.storyboard */,
-			);
-			name = Storyboards;
-			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		D40062921F92024D009E4FA9 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */,
 			);
-			name = Xibs;
 			path = Xibs;
 			sourceTree = "<group>";
 		};
@@ -93,16 +78,14 @@
 			children = (
 				D4E237971F91F1480058C4FC /* AppDelegate.swift */,
 			);
-			name = Applications;
 			path = Applications;
 			sourceTree = "<group>";
 		};
 		D40062941F920331009E4FA9 /* Ui */ = {
 			isa = PBXGroup;
 			children = (
-				D4E237991F91F1480058C4FC /* ViewController.swift */,
+				D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */,
 			);
-			name = Ui;
 			path = Ui;
 			sourceTree = "<group>";
 		};
@@ -204,9 +187,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E237A21F91F1480058C4FC /* LaunchScreen.storyboard in Resources */,
 				D4E2379F1F91F1480058C4FC /* Assets.xcassets in Resources */,
-				D4E2379D1F91F1480058C4FC /* Main.storyboard in Resources */,
+				D40062961F92228D009E4FA9 /* HomeScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,19 +221,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-qiiip/Pods-qiiip-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
 				"${BUILT_PRODUCTS_DIR}/CHQiitaApiClient/CHQiitaApiClient.framework",
-				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHQiitaApiClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,33 +257,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E2379A1F91F1480058C4FC /* ViewController.swift in Sources */,
 				D4E237981F91F1480058C4FC /* AppDelegate.swift in Sources */,
+				D40062981F9222F0009E4FA9 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D4E2379B1F91F1480058C4FC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4E2379C1F91F1480058C4FC /* Base */,
-			);
-			name = Main.storyboard;
-			path = .;
-			sourceTree = "<group>";
-		};
-		D4E237A01F91F1480058C4FC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4E237A11F91F1480058C4FC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = .;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D4E237A41F91F1480058C4FC /* Debug */ = {

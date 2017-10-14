@@ -1,3 +1,28 @@
-PODFILE CHECKSUM: d620eb8250935389d2bf66f0634268b0e582ed4c
+PODS:
+  - Alamofire (4.5.1)
+  - CHQiitaApiClient (0.0.5):
+    - Alamofire (~> 4.0)
+    - RxSwift (~> 3.4.1)
+  - RxSwift (3.4.1)
+
+DEPENDENCIES:
+  - CHQiitaApiClient (from `https://github.com/chuross/CHQiitaApiClient.git`, tag `0.0.5`)
+
+EXTERNAL SOURCES:
+  CHQiitaApiClient:
+    :git: https://github.com/chuross/CHQiitaApiClient.git
+    :tag: 0.0.5
+
+CHECKOUT OPTIONS:
+  CHQiitaApiClient:
+    :git: https://github.com/chuross/CHQiitaApiClient.git
+    :tag: 0.0.5
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  CHQiitaApiClient: 28bbfabaa1a2f2624a72334f5f5ef9df740f3263
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+
+PODFILE CHECKSUM: f7a6d7191eb8172d1804eb88c6b8256491cc6690
 
 COCOAPODS: 1.3.1
