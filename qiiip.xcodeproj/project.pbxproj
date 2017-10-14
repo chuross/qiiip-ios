@@ -52,10 +52,10 @@
 		D4E2378B1F91F1480058C4FC = {
 			isa = PBXGroup;
 			children = (
-				D4E237961F91F1480058C4FC /* qiiip */,
-				D4E237951F91F1480058C4FC /* Products */,
-				1F5463CA2D84D5B7EFFEE66D /* Pods */,
 				DD890465C41FE2D2207F1BBA /* Frameworks */,
+				1F5463CA2D84D5B7EFFEE66D /* Pods */,
+				D4E237951F91F1480058C4FC /* Products */,
+				D4E237961F91F1480058C4FC /* qiiip */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,11 +71,11 @@
 			isa = PBXGroup;
 			children = (
 				D4E237971F91F1480058C4FC /* AppDelegate.swift */,
-				D4E237991F91F1480058C4FC /* ViewController.swift */,
-				D4E2379B1F91F1480058C4FC /* Main.storyboard */,
 				D4E2379E1F91F1480058C4FC /* Assets.xcassets */,
-				D4E237A01F91F1480058C4FC /* LaunchScreen.storyboard */,
 				D4E237A31F91F1480058C4FC /* Info.plist */,
+				D4E237A01F91F1480058C4FC /* LaunchScreen.storyboard */,
+				D4E2379B1F91F1480058C4FC /* Main.storyboard */,
+				D4E237991F91F1480058C4FC /* ViewController.swift */,
 			);
 			path = qiiip;
 			sourceTree = "<group>";
@@ -241,6 +241,7 @@
 				D4E2379C1F91F1480058C4FC /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		D4E237A01F91F1480058C4FC /* LaunchScreen.storyboard */ = {
@@ -249,6 +250,7 @@
 				D4E237A11F91F1480058C4FC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
