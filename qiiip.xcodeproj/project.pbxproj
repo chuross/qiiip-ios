@@ -49,6 +49,63 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D400628F1F92012F009E4FA9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D40062931F92031E009E4FA9 /* Applications */,
+				D40062941F920331009E4FA9 /* Ui */,
+			);
+			name = Sources;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D40062901F920138009E4FA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D40062911F920239009E4FA9 /* Storyboards */,
+				D40062921F92024D009E4FA9 /* Xibs */,
+				D4E2379E1F91F1480058C4FC /* Assets.xcassets */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D40062911F920239009E4FA9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D4E237A01F91F1480058C4FC /* LaunchScreen.storyboard */,
+				D4E2379B1F91F1480058C4FC /* Main.storyboard */,
+			);
+			name = Storyboards;
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D40062921F92024D009E4FA9 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Xibs;
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		D40062931F92031E009E4FA9 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				D4E237971F91F1480058C4FC /* AppDelegate.swift */,
+			);
+			name = Applications;
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		D40062941F920331009E4FA9 /* Ui */ = {
+			isa = PBXGroup;
+			children = (
+				D4E237991F91F1480058C4FC /* ViewController.swift */,
+			);
+			name = Ui;
+			path = Ui;
+			sourceTree = "<group>";
+		};
 		D4E2378B1F91F1480058C4FC = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +127,9 @@
 		D4E237961F91F1480058C4FC /* qiiip */ = {
 			isa = PBXGroup;
 			children = (
-				D4E237971F91F1480058C4FC /* AppDelegate.swift */,
-				D4E2379E1F91F1480058C4FC /* Assets.xcassets */,
+				D40062901F920138009E4FA9 /* Resources */,
+				D400628F1F92012F009E4FA9 /* Sources */,
 				D4E237A31F91F1480058C4FC /* Info.plist */,
-				D4E237A01F91F1480058C4FC /* LaunchScreen.storyboard */,
-				D4E2379B1F91F1480058C4FC /* Main.storyboard */,
-				D4E237991F91F1480058C4FC /* ViewController.swift */,
 			);
 			path = qiiip;
 			sourceTree = "<group>";
@@ -394,6 +448,7 @@
 				D4E237A81F91F1480058C4FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
