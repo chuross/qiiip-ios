@@ -12,6 +12,13 @@ import XLPagerTabStrip
 
 class HomeScreenViewController : TwitterPagerTabStripViewController {
     
+    override func viewDidLoad() {
+        self.settings.style.titleColor = self.view.tintColor
+        self.settings.style.dotColor = self.view.tintColor
+        self.settings.style.selectedDotColor = self.view.tintColor
+        super.viewDidLoad()
+    }
+    
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         return [ItemsViewController()]
     }

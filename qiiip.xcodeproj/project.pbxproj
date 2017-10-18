@@ -125,6 +125,7 @@
 				D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */,
 			);
 			name = Screen;
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		D4C7F5D91F97DBAE001CB60B /* Component */ = {
@@ -133,6 +134,7 @@
 				D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */,
 			);
 			name = Component;
+			path = Component;
 			sourceTree = "<group>";
 		};
 		D4E2378B1F91F1480058C4FC = {
