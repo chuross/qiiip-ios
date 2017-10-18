@@ -10,6 +10,8 @@
 		78B7AEEB04B54D356F26E809 /* Pods_qiiip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF66B85270224ACD4BFFB22 /* Pods_qiiip.framework */; };
 		D40062961F92228D009E4FA9 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */; };
 		D40062981F9222F0009E4FA9 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */; };
+		D4C7F5DB1F97DBC1001CB60B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */; };
+		D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */; };
 		D4E237981F91F1480058C4FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E237971F91F1480058C4FC /* AppDelegate.swift */; };
 		D4E2379F1F91F1480058C4FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E2379E1F91F1480058C4FC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -20,6 +22,8 @@
 		9255220648B712EC0DDB81AF /* Pods-qiiip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiiip.release.xcconfig"; path = "Pods/Target Support Files/Pods-qiiip/Pods-qiiip.release.xcconfig"; sourceTree = "<group>"; };
 		D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 		D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsViewController.xib; sourceTree = "<group>"; };
 		D4E237941F91F1480058C4FC /* qiiip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qiiip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E237971F91F1480058C4FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E2379E1F91F1480058C4FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */,
+				D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -94,7 +99,8 @@
 		D4C7F5D31F97B7C8001CB60B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */,
+				D4C7F5D91F97DBAE001CB60B /* Component */,
+				D4C7F5D81F97DBA6001CB60B /* Screen */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,6 +117,22 @@
 			children = (
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		D4C7F5D81F97DBA6001CB60B /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */,
+			);
+			name = Screen;
+			sourceTree = "<group>";
+		};
+		D4C7F5D91F97DBAE001CB60B /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */,
+			);
+			name = Component;
 			sourceTree = "<group>";
 		};
 		D4E2378B1F91F1480058C4FC = {
@@ -212,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4E2379F1F91F1480058C4FC /* Assets.xcassets in Resources */,
+				D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */,
 				D40062961F92228D009E4FA9 /* HomeScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4E237981F91F1480058C4FC /* AppDelegate.swift in Sources */,
+				D4C7F5DB1F97DBC1001CB60B /* ItemsViewController.swift in Sources */,
 				D40062981F9222F0009E4FA9 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

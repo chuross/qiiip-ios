@@ -8,7 +8,11 @@
 
 import Foundation
 import UIKit
+import XLPagerTabStrip
 
-class HomeScreenViewController : UIViewController {
+class HomeScreenViewController : TwitterPagerTabStripViewController {
     
+    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+        return [ItemsViewController()]
+    }
 }

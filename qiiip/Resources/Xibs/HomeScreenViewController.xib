@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeScreenViewController" customModule="qiiip" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="mZC-71-uUi" id="S6T-9G-e8H"/>
                 <outlet property="view" destination="Qzh-YD-rrW" id="kIn-h1-C2l"/>
             </connections>
         </placeholder>
@@ -18,8 +19,19 @@
         <view contentMode="scaleToFill" id="Qzh-YD-rrW">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZC-71-uUi">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </scrollView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="210" y="-26"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mZC-71-uUi" secondAttribute="trailing" id="Jiz-8A-AWv"/>
+                <constraint firstAttribute="bottom" secondItem="mZC-71-uUi" secondAttribute="bottom" id="OdX-w1-Wz0"/>
+                <constraint firstItem="mZC-71-uUi" firstAttribute="top" secondItem="Qzh-YD-rrW" secondAttribute="top" id="pkt-ei-iyT"/>
+                <constraint firstItem="mZC-71-uUi" firstAttribute="leading" secondItem="Qzh-YD-rrW" secondAttribute="leading" id="t0f-wu-CQh"/>
+            </constraints>
+            <point key="canvasLocation" x="63.5" y="-31.5"/>
         </view>
     </objects>
 </document>
