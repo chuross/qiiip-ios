@@ -18,7 +18,7 @@
 		26CF66ABB6B579E7DC3D221A /* Pods-qiiip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiiip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-qiiip/Pods-qiiip.debug.xcconfig"; sourceTree = "<group>"; };
 		4FF66B85270224ACD4BFFB22 /* Pods_qiiip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiiip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9255220648B712EC0DDB81AF /* Pods-qiiip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiiip.release.xcconfig"; path = "Pods/Target Support Files/Pods-qiiip/Pods-qiiip.release.xcconfig"; sourceTree = "<group>"; };
-		D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = SOURCE_ROOT; };
+		D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 		D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		D4E237941F91F1480058C4FC /* qiiip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qiiip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E237971F91F1480058C4FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				D40062931F92031E009E4FA9 /* Applications */,
+				D4C7F5D51F97BA08001CB60B /* Domain */,
 				D40062941F920331009E4FA9 /* Ui */,
 			);
 			path = Sources;
@@ -84,9 +85,35 @@
 		D40062941F920331009E4FA9 /* Ui */ = {
 			isa = PBXGroup;
 			children = (
-				D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */,
+				D4C7F5D31F97B7C8001CB60B /* View */,
+				D4C7F5D41F97B7D1001CB60B /* ViewModel */,
 			);
 			path = Ui;
+			sourceTree = "<group>";
+		};
+		D4C7F5D31F97B7C8001CB60B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		D4C7F5D41F97B7D1001CB60B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D4C7F5D51F97BA08001CB60B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Domain;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		D4E2378B1F91F1480058C4FC = {
@@ -223,12 +250,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CHQiitaApiClient/CHQiitaApiClient.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHQiitaApiClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

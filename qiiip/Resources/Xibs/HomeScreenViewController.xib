@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeScreenViewController" customModule="qiiip" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="h01-Fa-uoQ" id="7vH-IG-Urn"/>
+                <outlet property="view" destination="Qzh-YD-rrW" id="kIn-h1-C2l"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="h01-Fa-uoQ">
+        <view contentMode="scaleToFill" id="Qzh-YD-rrW">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="-54" y="-36"/>
+            <point key="canvasLocation" x="210" y="-26"/>
         </view>
     </objects>
 </document>
