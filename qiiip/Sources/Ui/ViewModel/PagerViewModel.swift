@@ -14,7 +14,7 @@ open class PagerViewModel<I> : BaseViewModel {
     let list: Variable<[I]?> = Variable(nil)
     let error: Variable<Error?> = Variable(nil)
     let currentOffset: Variable<Int> = Variable(0)
-    let defaultLimit: Int = 20
+    private let limit: Int = 20
     
     func source(currentOffset: Int, limit: Int) -> Single<[I]> {
         return Single.error(NSError(domain: "not inplemented", code: -1))
@@ -23,10 +23,7 @@ open class PagerViewModel<I> : BaseViewModel {
     func fetch() {
         isLoading.value = true
         
-        source(currentOffset: currentOffset.value, limit: defaultLimit)
-            .subscribeOn(AppDelegate.application().concurrentScheduler)
-            .observeOn(CurrentThreadScheduler.instance)
-            .do(onCompleted: { () in self.isLoading.value = false })
+        getPagerSource(offset: currentOffset.value, limit: limit)
             .subscribe(onSuccess: { list in
                 self.list.value = list
                 self.error.value = nil
@@ -34,6 +31,24 @@ open class PagerViewModel<I> : BaseViewModel {
                 self.error.value = error
             })
             .addDisposableTo(disposeBag)
+    }
+    
+    func fetchNext() {
+        isLoading.value = true
+        
+        getPagerSource(offset: currentOffset.value, limit: limit)
+            .subscribe(onSuccess: { list in
+                self.list.value?.append(contentsOf: list)
+            })
+            .addDisposableTo(disposeBag)
+        
+    }
+    
+    private func getPagerSource(offset: Int, limit: Int) -> Single<[I]> {
+        return source(currentOffset: offset, limit: limit)
+            .subscribeOn(AppDelegate.application().concurrentScheduler)
+            .observeOn(CurrentThreadScheduler.instance)
+            .do(onCompleted: { () in self.isLoading.value = false })
     }
     
 }
