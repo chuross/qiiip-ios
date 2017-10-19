@@ -120,6 +120,7 @@
 				D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */,
 			);
 			name = Screen;
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		D421BA7B1F9920DD00B492B0 /* Component */ = {
@@ -128,6 +129,7 @@
 				D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */,
 			);
 			name = Component;
+			path = Component;
 			sourceTree = "<group>";
 		};
 		D421BA7C1F9920E600B492B0 /* Cell */ = {
@@ -136,6 +138,7 @@
 				D421BA7D1F99211800B492B0 /* ItemCell.xib */,
 			);
 			name = Cell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D4C7F5D31F97B7C8001CB60B /* View */ = {
