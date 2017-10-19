@@ -64,7 +64,7 @@
 		D400628F1F92012F009E4FA9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D40062931F92031E009E4FA9 /* Applications */,
+				D40062931F92031E009E4FA9 /* Application */,
 				D40062941F920331009E4FA9 /* Ui */,
 			);
 			path = Sources;
@@ -73,28 +73,30 @@
 		D40062901F920138009E4FA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D40062921F92024D009E4FA9 /* Xibs */,
+				D40062921F92024D009E4FA9 /* Xib */,
 				D4E2379E1F91F1480058C4FC /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D40062921F92024D009E4FA9 /* Xibs */ = {
+		D40062921F92024D009E4FA9 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
 				D421BA7C1F9920E600B492B0 /* Cell */,
 				D421BA7B1F9920DD00B492B0 /* Component */,
 				D421BA7A1F9920D400B492B0 /* Screen */,
 			);
-			path = Xibs;
+			name = Xib;
+			path = Xib;
 			sourceTree = "<group>";
 		};
-		D40062931F92031E009E4FA9 /* Applications */ = {
+		D40062931F92031E009E4FA9 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				D4E237971F91F1480058C4FC /* AppDelegate.swift */,
 			);
-			path = Applications;
+			name = Application;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		D40062941F920331009E4FA9 /* Ui */ = {
