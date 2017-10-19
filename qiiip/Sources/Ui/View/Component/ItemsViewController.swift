@@ -12,6 +12,8 @@ import XLPagerTabStrip
 
 class ItemsViewController : UIViewController, IndicatorInfoProvider {
     
+    @IBOutlet weak var listView: UITableView!
+    
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "すべての投稿")
     }

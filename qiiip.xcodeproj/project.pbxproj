@@ -14,6 +14,7 @@
 		D404EEF91F98E640003F05AA /* ItemsViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D404EEF81F98E640003F05AA /* ItemsViewControllerModel.swift */; };
 		D404EEFC1F98E875003F05AA /* PagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D404EEFB1F98E875003F05AA /* PagerViewModel.swift */; };
 		D404EEFE1F98E8FB003F05AA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D404EEFD1F98E8FB003F05AA /* BaseViewModel.swift */; };
+		D421BA7E1F99211800B492B0 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D421BA7D1F99211800B492B0 /* ItemCell.xib */; };
 		D4C7F5DB1F97DBC1001CB60B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */; };
 		D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */; };
 		D4E237981F91F1480058C4FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E237971F91F1480058C4FC /* AppDelegate.swift */; };
@@ -26,10 +27,11 @@
 		9255220648B712EC0DDB81AF /* Pods-qiiip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiiip.release.xcconfig"; path = "Pods/Target Support Files/Pods-qiiip/Pods-qiiip.release.xcconfig"; sourceTree = "<group>"; };
 		D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 		D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
-		D404EEF61F98E4C4003F05AA /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		D404EEF81F98E640003F05AA /* ItemsViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsViewControllerModel.swift; path = ItemsViewControllerModel.swift; sourceTree = "<group>"; };
-		D404EEFB1F98E875003F05AA /* PagerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagerViewModel.swift; path = PagerViewModel.swift; sourceTree = "<group>"; };
-		D404EEFD1F98E8FB003F05AA /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewModel.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		D404EEF61F98E4C4003F05AA /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D404EEF81F98E640003F05AA /* ItemsViewControllerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerModel.swift; sourceTree = "<group>"; };
+		D404EEFB1F98E875003F05AA /* PagerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerViewModel.swift; sourceTree = "<group>"; };
+		D404EEFD1F98E8FB003F05AA /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		D421BA7D1F99211800B492B0 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsViewController.xib; sourceTree = "<group>"; };
 		D4E237941F91F1480058C4FC /* qiiip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qiiip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				D40062931F92031E009E4FA9 /* Applications */,
-				D4C7F5D51F97BA08001CB60B /* Domain */,
 				D40062941F920331009E4FA9 /* Ui */,
 			);
 			path = Sources;
@@ -81,8 +82,9 @@
 		D40062921F92024D009E4FA9 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */,
-				D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */,
+				D421BA7C1F9920E600B492B0 /* Cell */,
+				D421BA7B1F9920DD00B492B0 /* Component */,
+				D421BA7A1F9920D400B492B0 /* Screen */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -109,8 +111,31 @@
 			children = (
 				D404EEF81F98E640003F05AA /* ItemsViewControllerModel.swift */,
 			);
-			name = Component;
 			path = Component;
+			sourceTree = "<group>";
+		};
+		D421BA7A1F9920D400B492B0 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */,
+			);
+			name = Screen;
+			sourceTree = "<group>";
+		};
+		D421BA7B1F9920DD00B492B0 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */,
+			);
+			name = Component;
+			sourceTree = "<group>";
+		};
+		D421BA7C1F9920E600B492B0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D421BA7D1F99211800B492B0 /* ItemCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		D4C7F5D31F97B7C8001CB60B /* View */ = {
@@ -131,13 +156,6 @@
 				D404EEF61F98E4C4003F05AA /* ViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		D4C7F5D51F97BA08001CB60B /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
 			sourceTree = "<group>";
 		};
 		D4C7F5D81F97DBA6001CB60B /* Screen */ = {
@@ -254,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D421BA7E1F99211800B492B0 /* ItemCell.xib in Resources */,
 				D4E2379F1F91F1480058C4FC /* Assets.xcassets in Resources */,
 				D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */,
 				D40062961F92228D009E4FA9 /* HomeScreenViewController.xib in Resources */,
