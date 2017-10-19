@@ -19,17 +19,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ieeei" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pJ-RO-GBx">
-                    <rect key="frame" x="169" y="323" width="36" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T8I-Ar-ixW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.28356368949217514" green="0.82098058464223378" blue="0.26455124868847302" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="8pJ-RO-GBx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="CSP-CP-XPB"/>
-                <constraint firstItem="8pJ-RO-GBx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ht5-Y0-cix"/>
+                <constraint firstAttribute="trailing" secondItem="T8I-Ar-ixW" secondAttribute="trailing" id="APL-UH-f2j"/>
+                <constraint firstItem="T8I-Ar-ixW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GsZ-U4-JwP"/>
+                <constraint firstAttribute="bottom" secondItem="T8I-Ar-ixW" secondAttribute="bottom" id="KAV-r0-X2w"/>
+                <constraint firstItem="T8I-Ar-ixW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ulZ-VX-HdK"/>
             </constraints>
         </view>
     </objects>
