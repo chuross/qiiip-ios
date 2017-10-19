@@ -13,17 +13,19 @@ open class PagerViewModel<I> : BaseViewModel {
     let isLoading: Variable<Bool> = Variable(false)
     let list: Variable<[I]?> = Variable(nil)
     let error: Variable<Error?> = Variable(nil)
-    let currentOffset: Variable<Int> = Variable(0)
-    private let limit: Int = 20
+    let currentPage: Variable<Int32> = Variable(1)
+    private let limit: Int32 = 20
+    private let defaultPage: Int32 = 1
     
-    func source(currentOffset: Int, limit: Int) -> Single<[I]> {
+    func source(currentPage: Int32, limit: Int32) -> Single<[I]> {
         return Single.error(NSError(domain: "not inplemented", code: -1))
     }
     
     func fetch() {
-        isLoading.value = true
+        self.isLoading.value = true
         
-        getPagerSource(offset: currentOffset.value, limit: limit)
+        getPagerSource(page: currentPage.value, limit: limit)
+            .do(onNext: { _ in self.currentPage.value = self.defaultPage })
             .subscribe(onSuccess: { list in
                 self.list.value = list
                 self.error.value = nil
@@ -34,9 +36,9 @@ open class PagerViewModel<I> : BaseViewModel {
     }
     
     func fetchNext() {
-        isLoading.value = true
+        self.isLoading.value = true
         
-        getPagerSource(offset: currentOffset.value, limit: limit)
+        getPagerSource(page: currentPage.value, limit: limit)
             .subscribe(onSuccess: { list in
                 self.list.value?.append(contentsOf: list)
             })
@@ -44,11 +46,12 @@ open class PagerViewModel<I> : BaseViewModel {
         
     }
     
-    private func getPagerSource(offset: Int, limit: Int) -> Single<[I]> {
-        return source(currentOffset: offset, limit: limit)
+    private func getPagerSource(page: Int32, limit: Int32) -> Single<[I]> {
+        return source(currentPage: page, limit: limit)
             .subscribeOn(AppDelegate.application().concurrentScheduler)
             .observeOn(CurrentThreadScheduler.instance)
             .do(onCompleted: { () in self.isLoading.value = false })
+            .do(onNext: { _ in self.currentPage.value += 1 })
     }
     
 }

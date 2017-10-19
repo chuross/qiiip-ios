@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import RxSwift
 import CHQiitaApiClient
 
-class ItemsViewControllerModel : BaseViewModel {
+class ItemsViewControllerModel : PagerViewModel<Item> {
     
-    func fetch() {
+    override func source(currentPage: Int32, limit: Int32) -> Single<[Item]> {
+        return ItemsAPI.itemsGet(page: currentPage, perPage: limit).asSingle()
     }
     
 }
