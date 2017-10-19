@@ -13,6 +13,6 @@ import XLPagerTabStrip
 class ItemsViewController : UIViewController, IndicatorInfoProvider {
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "新着")
+        return IndicatorInfo(title: "すべての投稿")
     }
 }
