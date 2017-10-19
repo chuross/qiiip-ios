@@ -1,19 +1,17 @@
 PODS:
   - Alamofire (4.5.1)
-  - Bond (5.4.7):
-    - Diff (~> 0.4)
-    - ReactiveKit (~> 3.5.1)
   - CHQiitaApiClient (0.0.5):
     - Alamofire (~> 4.0)
     - RxSwift (~> 3.4.1)
-  - Diff (0.5.3)
-  - ReactiveKit (3.5.5)
+  - RxCocoa (3.5.0):
+    - RxSwift (~> 3.4)
   - RxSwift (3.4.1)
   - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
-  - Bond (~> 5)
   - CHQiitaApiClient (from `https://github.com/chuross/CHQiitaApiClient.git`, tag `0.0.5`)
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
   - XLPagerTabStrip (~> 8.0)
 
 EXTERNAL SOURCES:
@@ -28,13 +26,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Bond: 1e26bccae0c82266c6217705fe32ae3ca543ed30
   CHQiitaApiClient: 28bbfabaa1a2f2624a72334f5f5ef9df740f3263
-  Diff: befa1d19c32726b2b36ce915d98793e2fbde8dcc
-  ReactiveKit: ced30f9647912f74510bd8179790cf2dfc9454c8
+  RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
   XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: 9f938b980f91a9cf97d28dc3a8ffd559e8bc0bf9
+PODFILE CHECKSUM: 33caa5fdd02c21c5fca0b28ce0f8fde827e03d84
 
 COCOAPODS: 1.3.1
