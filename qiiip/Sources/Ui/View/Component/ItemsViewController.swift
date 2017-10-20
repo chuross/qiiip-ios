@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import XLPagerTabStrip
 
-class ItemsViewController : UIViewController, IndicatorInfoProvider {
+class ItemsViewController: UIViewController, IndicatorInfoProvider {
     
     @IBOutlet weak var listView: UITableView!
     

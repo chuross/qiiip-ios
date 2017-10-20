@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import CHQiitaApiClient
 
-class ItemsViewControllerModel : PagerViewModel<Item> {
+class ItemsViewControllerModel: PagerViewModel<Item> {
     
     override func source(currentPage: Int32, limit: Int32) -> Single<[Item]> {
         return ItemsAPI.itemsGet(page: currentPage, perPage: limit).asSingle()

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import XLPagerTabStrip
 
-class HomeScreenViewController : TwitterPagerTabStripViewController {
+class HomeScreenViewController: TwitterPagerTabStripViewController {
     
     override func viewDidLoad() {
         self.settings.style.titleColor = self.view.tintColor

@@ -8,7 +8,7 @@
 
 import RxSwift
 
-open class PagerViewModel<I> : BaseViewModel {
+open class PagerViewModel<I>: BaseViewModel {
     
     let isLoading: Variable<Bool> = Variable(false)
     let list: Variable<[I]?> = Variable(nil)
