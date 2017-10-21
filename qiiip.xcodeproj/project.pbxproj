@@ -19,6 +19,7 @@
 		D47E87F81F9B5B5A000A8ADE /* Registrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87F71F9B5B5A000A8ADE /* Registrable.swift */; };
 		D47E87FB1F9B6012000A8ADE /* Registrable+Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87FA1F9B6012000A8ADE /* Registrable+Xib.swift */; };
 		D47E87FD1F9B6A5D000A8ADE /* UITableView+Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87FC1F9B6A5D000A8ADE /* UITableView+Xib.swift */; };
+		D47E88031F9B72E6000A8ADE /* ItemViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E88021F9B72E6000A8ADE /* ItemViewCellDelegate.swift */; };
 		D4C7F5DB1F97DBC1001CB60B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */; };
 		D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */; };
 		D4E237981F91F1480058C4FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E237971F91F1480058C4FC /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 		D47E87F71F9B5B5A000A8ADE /* Registrable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registrable.swift; sourceTree = "<group>"; };
 		D47E87FA1F9B6012000A8ADE /* Registrable+Xib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Registrable+Xib.swift"; sourceTree = "<group>"; };
 		D47E87FC1F9B6A5D000A8ADE /* UITableView+Xib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Xib.swift"; sourceTree = "<group>"; };
+		D47E88021F9B72E6000A8ADE /* ItemViewCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewCellDelegate.swift; sourceTree = "<group>"; };
 		D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsViewController.xib; sourceTree = "<group>"; };
 		D4E237941F91F1480058C4FC /* qiiip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qiiip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 		D421BA7F1F99316600B492B0 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D47E88011F9B72D5000A8ADE /* Delegate */,
 				D421BA801F99317800B492B0 /* ItemViewCell.swift */,
 			);
 			path = Cell;
@@ -161,6 +164,15 @@
 				D47E87FC1F9B6A5D000A8ADE /* UITableView+Xib.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D47E88011F9B72D5000A8ADE /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D47E88021F9B72E6000A8ADE /* ItemViewCellDelegate.swift */,
+			);
+			name = Delegate;
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		D4C7F5D31F97B7C8001CB60B /* View */ = {
@@ -384,6 +396,7 @@
 				D404EEFE1F98E8FB003F05AA /* BaseViewModel.swift in Sources */,
 				D47E87FD1F9B6A5D000A8ADE /* UITableView+Xib.swift in Sources */,
 				D404EEF71F98E4C4003F05AA /* ViewModel.swift in Sources */,
+				D47E88031F9B72E6000A8ADE /* ItemViewCellDelegate.swift in Sources */,
 				D404EEFC1F98E875003F05AA /* PagerViewModel.swift in Sources */,
 				D40062981F9222F0009E4FA9 /* HomeScreenViewController.swift in Sources */,
 				D47E87F81F9B5B5A000A8ADE /* Registrable.swift in Sources */,
