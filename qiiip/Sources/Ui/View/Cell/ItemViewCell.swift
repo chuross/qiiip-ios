@@ -31,8 +31,8 @@ class ItemViewCell: UITableViewCell, Registrable {
     }
     
     private func initialize() {
-        self.dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
-        self.dateFormatter.locale = Locale(identifier: "")
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        dateFormatter.locale = Locale(identifier: "")
     }
     
     func setItem(item: Item) {

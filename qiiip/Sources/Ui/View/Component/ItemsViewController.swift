@@ -14,6 +14,7 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
     
     @IBOutlet weak var listView: UITableView!
     private var delegate: ItemViewCellDelegate? = nil
+    private var viewModel: ItemsViewControllerModel? = nil
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "すべての投稿")
@@ -22,8 +23,11 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.delegate = ItemViewCellDelegate()
+        viewModel = ItemsViewControllerModel()
+        viewModel?.fetch()
+        
+        delegate = ItemViewCellDelegate()
             
-        self.listView.register(ItemViewCell.self)
+        listView.register(ItemViewCell.self)
     }
 }

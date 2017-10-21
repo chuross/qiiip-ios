@@ -13,9 +13,9 @@ import XLPagerTabStrip
 class HomeScreenViewController: TwitterPagerTabStripViewController {
     
     override func viewDidLoad() {
-        self.settings.style.titleColor = self.view.tintColor
-        self.settings.style.dotColor = self.view.tintColor
-        self.settings.style.selectedDotColor = self.view.tintColor
+        settings.style.titleColor = view.tintColor
+        settings.style.dotColor = view.tintColor
+        settings.style.selectedDotColor = view.tintColor
         super.viewDidLoad()
     }
     

@@ -20,7 +20,7 @@ class ItemViewCellDelegate: NSObject, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ItemViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setItem(item: self.cachedItems[indexPath.row])
+        cell.setItem(item: cachedItems[indexPath.row])
         return cell
     }
 }
