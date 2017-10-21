@@ -9,11 +9,13 @@
 import Foundation
 import UIKit
 import XLPagerTabStrip
+import RxSwift
+import RxCocoa
 
 class ItemsViewController: UIViewController, IndicatorInfoProvider {
     
     @IBOutlet weak var listView: UITableView!
-    private var delegate: ItemViewCellDelegate? = nil
+    private var delegate: ItemViewCellDataSource? = nil
     private var viewModel: ItemsViewControllerModel? = nil
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
@@ -24,10 +26,13 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
         super.viewDidLoad()
         
         viewModel = ItemsViewControllerModel()
-        viewModel?.fetch()
         
-        delegate = ItemViewCellDelegate()
+        guard let viewModel = viewModel else { return }
+        viewModel.fetch()
+        
+        delegate = ItemViewCellDataSource()
             
         listView.register(ItemViewCell.self)
+        
     }
 }
