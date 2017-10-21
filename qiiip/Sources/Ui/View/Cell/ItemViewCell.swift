@@ -11,7 +11,7 @@ import UIKit
 import SDWebImage
 import CHQiitaApiClient
 
-class ItemViewCell: UITableViewCell {
+class ItemViewCell: UITableViewCell, Registrable {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var createdAtLabel: UILabel!
