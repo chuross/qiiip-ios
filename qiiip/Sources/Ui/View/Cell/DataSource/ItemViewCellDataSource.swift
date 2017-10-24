@@ -12,26 +12,21 @@ import CHQiitaApiClient
 import RxSwift 
 import RxCocoa
 
-class ItemViewCellDataSource: NSObject, UITableViewDelegate, UITableViewDataSource, RxTableViewDataSourceType {
+class ItemViewCellDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     
-    typealias Element = [Item]
-    
-    private var cachedItems: Element = []
+    var items: [Item] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cachedItems.count
+        return items.count
     }
     
-    func tableView(_ tableView: UITableView, observedEvent: Event<[Item]>) -> Void {
-        if case .next(let items) = observedEvent {
-            cachedItems = items
-            tableView.reloadData()
-        }
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ItemViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setItem(item: cachedItems[indexPath.row])
+        cell.setItem(item: items[indexPath.row])
         return cell
     }
 }

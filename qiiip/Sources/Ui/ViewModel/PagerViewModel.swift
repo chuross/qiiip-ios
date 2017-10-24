@@ -23,6 +23,7 @@ open class PagerViewModel<I>: BaseViewModel {
     
     func fetch() {
         self.isLoading.value = true
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         getPagerSource(page: currentPage.value, limit: limit)
             .do(onNext: { _ in self.currentPage.value = self.defaultPage })
@@ -37,6 +38,7 @@ open class PagerViewModel<I>: BaseViewModel {
     
     func fetchNext() {
         self.isLoading.value = true
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         getPagerSource(page: currentPage.value, limit: limit)
             .subscribe(onSuccess: { list in
@@ -50,7 +52,10 @@ open class PagerViewModel<I>: BaseViewModel {
         return source(currentPage: page, limit: limit)
             .subscribeOn(AppDelegate.application().concurrentScheduler)
             .observeOn(CurrentThreadScheduler.instance)
-            .do(onCompleted: { () in self.isLoading.value = false })
+            .do(onCompleted: { () in
+                self.isLoading.value = false
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            })
             .do(onNext: { _ in self.currentPage.value += 1 })
     }
     

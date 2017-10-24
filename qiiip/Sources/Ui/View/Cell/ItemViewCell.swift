@@ -37,7 +37,7 @@ class ItemViewCell: UITableViewCell, Registrable {
     
     func setItem(item: Item) {
         userIconImage.sd_setImage(with: URL(string: item.user?.profileImageUrl ?? ""))
-        nameLabel.text = item.user?.name
+        nameLabel.text = item.user?.id
         titleLabel.text = item.title
         tagLabel.text = item.tags?.map({ $0.name ?? "" }).joined(separator: ", ") ?? ""
     }

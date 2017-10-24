@@ -12,6 +12,7 @@ import RxSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let mainScheduler: SchedulerType = MainScheduler.instance
     let concurrentScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
     var window: UIWindow?
     var navigationController: UINavigationController?

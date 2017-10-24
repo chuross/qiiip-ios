@@ -9,17 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemViewCell" customModule="qiiip" customModuleProvider="target">
-            <connections>
-                <outlet property="createdAtLabel" destination="2Ke-Bt-QHy" id="Prz-9R-QtI"/>
-                <outlet property="nameLabel" destination="oO1-1p-nL4" id="6X4-uV-zRC"/>
-                <outlet property="tagLabel" destination="5hx-Z5-WHM" id="1PX-uO-eLB"/>
-                <outlet property="titleLabel" destination="L6S-x0-hF9" id="uBx-lR-3wv"/>
-                <outlet property="userIconImage" destination="FgF-No-qEv" id="jLK-VJ-prf"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="gkl-Yo-GoG">
+        <view contentMode="scaleToFill" id="gkl-Yo-GoG" customClass="ItemViewCell" customModule="qiiip" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="501" height="118"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -53,13 +45,13 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mpr-kg-LrN">
                             <rect key="frame" x="66" y="0.0" width="403" height="50"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6S-x0-hF9">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6S-x0-hF9">
                                     <rect key="frame" x="0.0" y="0.0" width="403" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tag1, tag2, tag3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hx-Z5-WHM">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="tag1, tag2, tag3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hx-Z5-WHM">
                                     <rect key="frame" x="0.0" y="20.5" width="403" height="29.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -81,6 +73,13 @@
                 <constraint firstItem="JWn-IA-D3v" firstAttribute="top" secondItem="unR-AX-tyf" secondAttribute="bottom" constant="16" id="t0S-XC-4h8"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="createdAtLabel" destination="2Ke-Bt-QHy" id="5lz-Eg-WjL"/>
+                <outlet property="nameLabel" destination="oO1-1p-nL4" id="wNy-oS-fCK"/>
+                <outlet property="tagLabel" destination="5hx-Z5-WHM" id="K2U-OU-A17"/>
+                <outlet property="titleLabel" destination="L6S-x0-hF9" id="aHU-Uq-wlZ"/>
+                <outlet property="userIconImage" destination="FgF-No-qEv" id="gm0-o8-dN2"/>
+            </connections>
             <point key="canvasLocation" x="-24.5" y="-434"/>
         </view>
     </objects>
