@@ -47,6 +47,7 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
         listView.delegate = dataSource
         listView.dataSource = dataSource
         listView.rowHeight = UITableViewAutomaticDimension
+        listView.estimatedRowHeight = ItemViewCellDataSource.estimatedRowHeight
         listView.register(ItemViewCell.self)
         
         viewModel.list.asObservable()

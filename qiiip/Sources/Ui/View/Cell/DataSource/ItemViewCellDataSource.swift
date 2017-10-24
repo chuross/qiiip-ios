@@ -14,6 +14,8 @@ import RxCocoa
 
 class ItemViewCellDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
     
+    public static let estimatedRowHeight: CGFloat = 120
+    
     var items: [Item] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
