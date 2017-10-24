@@ -54,6 +54,7 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
             .observeOn(AppDelegate.application().mainScheduler)
             .subscribe(onNext: { items in
                 guard let items = items else { return }
+                dataSource.items.removeAll()
                 dataSource.items.append(contentsOf: items)
                 self.listView.reloadData()
             })
