@@ -21,19 +21,31 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
         return IndicatorInfo(title: "すべての投稿")
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialize()
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        initialize()
+    }
+    
+    private func initialize() {
+        viewModel = ItemsViewControllerModel()
+        viewModel?.fetch()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = ItemsViewControllerModel()
-        
         guard let viewModel = viewModel else { return }
-        viewModel.fetch()
         
         dataSource = ItemViewCellDataSource()
         guard let dataSource = dataSource else { return }
         
         listView.delegate = dataSource
-        listView.dataSource = dataSource        
+        listView.dataSource = dataSource
         listView.rowHeight = UITableViewAutomaticDimension
         listView.register(ItemViewCell.self)
         
@@ -46,6 +58,10 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
                 self.listView.reloadData()
             })
             .addDisposableTo(viewModel.disposeBag)
-        
     }
+    
+    deinit {
+        viewModel?.destroy()
+    }
+
 }
