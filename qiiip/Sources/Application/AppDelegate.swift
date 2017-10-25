@@ -39,6 +39,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         return true
     }
+    
+    func pushScreen(nextViewController viewController: UIViewController) {
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 
 }
 

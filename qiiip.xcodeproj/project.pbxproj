@@ -24,6 +24,8 @@
 		D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */; };
 		D4E237981F91F1480058C4FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E237971F91F1480058C4FC /* AppDelegate.swift */; };
 		D4E2379F1F91F1480058C4FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E2379E1F91F1480058C4FC /* Assets.xcassets */; };
+		D4F005071FA1195B00A2418E /* ItemDetailScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F005061FA1195B00A2418E /* ItemDetailScreenViewController.swift */; };
+		D4F005091FA1199100A2418E /* ItemDetailScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4F005081FA1199100A2418E /* ItemDetailScreenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		D4E237971F91F1480058C4FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4E2379E1F91F1480058C4FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4E237A31F91F1480058C4FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4F005061FA1195B00A2418E /* ItemDetailScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailScreenViewController.swift; sourceTree = "<group>"; };
+		D4F005081FA1199100A2418E /* ItemDetailScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemDetailScreenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				D40062951F92228D009E4FA9 /* HomeScreenViewController.xib */,
+				D4F005081FA1199100A2418E /* ItemDetailScreenViewController.xib */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -171,7 +176,6 @@
 			children = (
 				D47E88021F9B72E6000A8ADE /* ItemViewCellDataSource.swift */,
 			);
-			name = DataSource;
 			path = DataSource;
 			sourceTree = "<group>";
 		};
@@ -202,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				D40062971F9222F0009E4FA9 /* HomeScreenViewController.swift */,
+				D4F005061FA1195B00A2418E /* ItemDetailScreenViewController.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F005091FA1199100A2418E /* ItemDetailScreenViewController.xib in Resources */,
 				D421BA7E1F99211800B492B0 /* ItemViewCell.xib in Resources */,
 				D4E2379F1F91F1480058C4FC /* Assets.xcassets in Resources */,
 				D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */,
@@ -398,6 +404,7 @@
 				D404EEF71F98E4C4003F05AA /* ViewModel.swift in Sources */,
 				D47E88031F9B72E6000A8ADE /* ItemViewCellDataSource.swift in Sources */,
 				D404EEFC1F98E875003F05AA /* PagerViewModel.swift in Sources */,
+				D4F005071FA1195B00A2418E /* ItemDetailScreenViewController.swift in Sources */,
 				D40062981F9222F0009E4FA9 /* HomeScreenViewController.swift in Sources */,
 				D47E87F81F9B5B5A000A8ADE /* Registrable.swift in Sources */,
 				D47E87FB1F9B6012000A8ADE /* Registrable+Xib.swift in Sources */,

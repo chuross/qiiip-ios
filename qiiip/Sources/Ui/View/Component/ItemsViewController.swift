@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import RxCocoa
 import XLPagerTabStrip
 
 class ItemsViewController: UIViewController, IndicatorInfoProvider {
@@ -50,6 +51,16 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
         listView.rowHeight = UITableViewAutomaticDimension
         listView.estimatedRowHeight = ItemViewCellDataSource.estimatedRowHeight
         listView.register(ItemViewCell.self)
+        
+        listView.rx.itemSelected
+            .do(onNext: { [weak self] in self?.listView.deselectRow(at: $0, animated: true) })
+            .map({ viewModel.listItem(index: $0) })
+            .filter({ $0 != nil })
+            .subscribe(onNext: { item in
+                let nextViewController = ItemDetailScreenViewController(item: item!)
+                AppDelegate.application().pushScreen(nextViewController: nextViewController)
+            })
+            .addDisposableTo(viewModel.disposeBag)
         
         viewModel.list.asObservable()
             .subscribeOn(AppDelegate.application().mainScheduler)

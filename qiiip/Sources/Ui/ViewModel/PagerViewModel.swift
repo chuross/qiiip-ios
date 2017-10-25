@@ -25,7 +25,7 @@ open class PagerViewModel<I>: BaseViewModel {
         self.isLoading.value = true
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-        getPagerSource(page: currentPage.value, limit: limit)
+        pagerSource(page: currentPage.value, limit: limit)
             .do(onNext: { _ in self.currentPage.value = self.defaultPage })
             .subscribe(onSuccess: { list in
                 self.list.value = list
@@ -40,7 +40,7 @@ open class PagerViewModel<I>: BaseViewModel {
         self.isLoading.value = true
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-        getPagerSource(page: currentPage.value, limit: limit)
+        pagerSource(page: currentPage.value, limit: limit)
             .subscribe(onSuccess: { list in
                 self.list.value?.append(contentsOf: list)
             })
@@ -48,7 +48,7 @@ open class PagerViewModel<I>: BaseViewModel {
         
     }
     
-    private func getPagerSource(page: Int32, limit: Int32) -> Single<[I]> {
+    private func pagerSource(page: Int32, limit: Int32) -> Single<[I]> {
         return source(currentPage: page, limit: limit)
             .subscribeOn(AppDelegate.application().concurrentScheduler)
             .observeOn(CurrentThreadScheduler.instance)
@@ -57,6 +57,10 @@ open class PagerViewModel<I>: BaseViewModel {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             })
             .do(onNext: { _ in self.currentPage.value += 1 })
+    }
+    
+    func listItem(index: IndexPath) -> I? {
+        return list.value?[index.row]
     }
     
 }
