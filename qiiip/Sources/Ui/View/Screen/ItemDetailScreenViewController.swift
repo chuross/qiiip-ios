@@ -11,7 +11,7 @@ import UIKit
 import WebKit
 import CHQiitaApiClient
 
-class ItemDetailScreenViewController: UIViewController, WKNavigationDelegate {
+class ItemDetailScreenViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
     var webView: WKWebView!
     var item: Item!
@@ -33,8 +33,9 @@ class ItemDetailScreenViewController: UIViewController, WKNavigationDelegate {
         super.loadView()
         
         let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView = WKWebView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height), configuration: webConfiguration)
         webView.navigationDelegate = self
+        webView.uiDelegate = self
         
         view.addSubview(webView)
     }
