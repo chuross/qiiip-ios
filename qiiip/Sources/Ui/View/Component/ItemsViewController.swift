@@ -56,6 +56,8 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
             .do(onNext: { [weak self] in self?.listView.deselectRow(at: $0, animated: true) })
             .map({ viewModel.listItem(index: $0) })
             .filter({ $0 != nil })
+            .subscribeOn(AppDelegate.application().mainScheduler)
+            .observeOn(AppDelegate.application().mainScheduler)
             .subscribe(onNext: { item in
                 let nextViewController = ItemDetailScreenViewController(item: item!)
                 AppDelegate.application().pushScreen(nextViewController: nextViewController)
