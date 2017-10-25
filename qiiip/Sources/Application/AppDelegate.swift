@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var navigationController: UINavigationController?
     
+    public static func statusBarHeight() -> CGFloat {
+        return UIApplication.shared.statusBarFrame.size.height
+    }
+    
+    public static func navigationBarHeight() -> CGFloat {
+        let navigationBarHeight = application().navigationController?.navigationBar.frame.height ?? 0
+        return navigationBarHeight + statusBarHeight()
+    }
+    
     public static func application() -> AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }

@@ -32,12 +32,12 @@ class ItemViewCell: UITableViewCell, Registrable {
     
     private func initialize() {
         dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
-        dateFormatter.locale = Locale(identifier: "")
     }
     
     func setItem(item: Item) {
         userIconImage.sd_setImage(with: URL(string: item.user?.profileImageUrl ?? ""))
         nameLabel.text = item.user?.id
+        createdAtLabel.text = dateFormatter.string(from: item.createdAt)
         titleLabel.text = item.title
         tagLabel.text = item.tags?.map({ $0.name ?? "" }).joined(separator: ", ") ?? ""
     }

@@ -17,6 +17,8 @@ class HomeScreenViewController: TwitterPagerTabStripViewController {
         settings.style.dotColor = view.tintColor
         settings.style.selectedDotColor = view.tintColor
         super.viewDidLoad()
+        
+        automaticallyAdjustsScrollViewInsets = false
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

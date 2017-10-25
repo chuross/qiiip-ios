@@ -44,6 +44,7 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
         dataSource = ItemViewCellDataSource()
         guard let dataSource = dataSource else { return }
         
+        listView.contentInset = UIEdgeInsets(top: AppDelegate.navigationBarHeight(), left: 0, bottom: 0, right: 0)
         listView.delegate = dataSource
         listView.dataSource = dataSource
         listView.rowHeight = UITableViewAutomaticDimension
