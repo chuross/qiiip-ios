@@ -31,7 +31,7 @@ class ItemViewCell: UITableViewCell, Registrable {
     }
     
     private func initialize() {
-        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+        dateFormatter.dateFormat = "がyyyy/MM/dd HH:mm:ssに投稿"
     }
     
     func setItem(item: Item) {
