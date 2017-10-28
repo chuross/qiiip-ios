@@ -17,6 +17,7 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
     @IBOutlet weak var listView: UITableView!
     private var dataSource: ItemViewCellDataSource? = nil
     private var viewModel: ItemsViewControllerModel? = nil
+    private var refreshControl: UIRefreshControl!
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "すべての投稿")
@@ -42,9 +43,17 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
         
         guard let viewModel = viewModel else { return }
         
+        refreshControl = UIRefreshControl()
+        refreshControl.rx.controlEvent(.valueChanged)
+            .subscribeOn(AppDelegate.application().mainScheduler)
+            .observeOn(AppDelegate.application().mainScheduler)
+            .subscribe(onNext: { viewModel.fetch() })
+            .addDisposableTo(viewModel.disposeBag)
+
         dataSource = ItemViewCellDataSource()
         guard let dataSource = dataSource else { return }
 
+        listView.refreshControl = refreshControl
         listView.delegate = dataSource
         listView.dataSource = dataSource
         listView.rowHeight = UITableViewAutomaticDimension
@@ -66,11 +75,12 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
         viewModel.list.asObservable()
             .subscribeOn(AppDelegate.application().mainScheduler)
             .observeOn(AppDelegate.application().mainScheduler)
-            .subscribe(onNext: { items in
+            .subscribe(onNext: { [weak self] items in
+                self?.refreshControl.endRefreshing()
                 guard let items = items else { return }
                 dataSource.items.removeAll()
                 dataSource.items.append(contentsOf: items)
-                self.listView.reloadData()
+                self?.listView.reloadData()
             })
             .addDisposableTo(viewModel.disposeBag)
     }
