@@ -10,12 +10,13 @@ import Foundation
 import UIKit
 import SDWebImage
 import CHQiitaApiClient
+import APAvatarImageView
 
 class ItemViewCell: UITableViewCell, Registrable {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var createdAtLabel: UILabel!
-    @IBOutlet weak var userIconImage: UIImageView!
+    @IBOutlet weak var userIconImage: APAvatarImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tagLabel: UILabel!
     private let dateFormatter: DateFormatter = DateFormatter()
@@ -35,6 +36,7 @@ class ItemViewCell: UITableViewCell, Registrable {
     }
     
     func setItem(item: Item) {
+        userIconImage.borderWidth = 0
         userIconImage.sd_setImage(with: URL(string: item.user?.profileImageUrl ?? ""))
         nameLabel.text = item.user?.id
         createdAtLabel.text = dateFormatter.string(from: item.createdAt)

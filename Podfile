@@ -8,4 +8,5 @@ target 'qiiip' do
   pod 'CHQiitaApiClient', :git => 'https://github.com/chuross/CHQiitaApiClient.git', :tag => '0.0.7'
   pod 'SDWebImage', '~> 4.1'
   pod 'XLPagerTabStrip', '~> 8.0'
+  pod 'APAvatarImageView'
 end
