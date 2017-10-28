@@ -7,5 +7,14 @@
 //
 
 import Foundation
+import Keys
 
-class HomeScreenViewControllerModel: BaseViewModel {}
+class HomeScreenViewControllerModel: BaseViewModel {
+
+    private let keys: QiiipXcodeprojKeys = QiiipXcodeprojKeys()
+    var authUrl: URL {
+        get {
+            return URL(string: "https://qiita.com/api/v2/oauth/authorize?client_id=\(keys.qiitaClientId)&scope=read_qiita")!
+        }
+    }
+}

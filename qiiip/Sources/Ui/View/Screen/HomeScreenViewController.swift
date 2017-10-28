@@ -28,7 +28,10 @@ class HomeScreenViewController: TwitterPagerTabStripViewController {
         accountButton.rx.tap
             .subscribeOn(AppDelegate.application().mainScheduler)
             .observeOn(AppDelegate.application().mainScheduler)
-            .subscribe(onNext: { [weak self] in /* todo */ })
+            .subscribe(onNext: { [weak self] _ in
+                guard let viewModel = self?.viewModel else { return }
+                UIApplication.shared.open(viewModel.authUrl, options: [:], completionHandler: nil)
+            })
             .addDisposableTo(viewModel.disposeBag)
     }
 
