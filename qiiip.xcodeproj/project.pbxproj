@@ -20,6 +20,8 @@
 		D47E87FB1F9B6012000A8ADE /* Registrable+Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87FA1F9B6012000A8ADE /* Registrable+Xib.swift */; };
 		D47E87FD1F9B6A5D000A8ADE /* UITableView+Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87FC1F9B6A5D000A8ADE /* UITableView+Xib.swift */; };
 		D47E88031F9B72E6000A8ADE /* ItemViewCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E88021F9B72E6000A8ADE /* ItemViewCellDataSource.swift */; };
+		D48595C41FA4FD2C009E9A37 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48595C31FA4FD2C009E9A37 /* AuthorizeViewController.swift */; };
+		D48595C91FA4FEE0009E9A37 /* AuthorizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48595C81FA4FEE0009E9A37 /* AuthorizeViewController.xib */; };
 		D4C7F5DB1F97DBC1001CB60B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */; };
 		D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */; };
 		D4D878C51FA4B3D500A40708 /* HomeScreenViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D878C41FA4B3D500A40708 /* HomeScreenViewControllerModel.swift */; };
@@ -45,6 +47,8 @@
 		D47E87FA1F9B6012000A8ADE /* Registrable+Xib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Registrable+Xib.swift"; sourceTree = "<group>"; };
 		D47E87FC1F9B6A5D000A8ADE /* UITableView+Xib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Xib.swift"; sourceTree = "<group>"; };
 		D47E88021F9B72E6000A8ADE /* ItemViewCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewCellDataSource.swift; sourceTree = "<group>"; };
+		D48595C31FA4FD2C009E9A37 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
+		D48595C81FA4FEE0009E9A37 /* AuthorizeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizeViewController.xib; sourceTree = "<group>"; };
 		D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsViewController.xib; sourceTree = "<group>"; };
 		D4D878C41FA4B3D500A40708 /* HomeScreenViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewControllerModel.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			children = (
 				D421BA7C1F9920E600B492B0 /* Cell */,
 				D421BA7B1F9920DD00B492B0 /* Component */,
+				D48595C51FA4FE2A009E9A37 /* Modal */,
 				D421BA7A1F9920D400B492B0 /* Screen */,
 			);
 			path = Xib;
@@ -181,12 +186,29 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		D48595C21FA4FD0F009E9A37 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				D48595C31FA4FD2C009E9A37 /* AuthorizeViewController.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		D48595C51FA4FE2A009E9A37 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				D48595C81FA4FEE0009E9A37 /* AuthorizeViewController.xib */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		D4C7F5D31F97B7C8001CB60B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				D421BA7F1F99316600B492B0 /* Cell */,
 				D4C7F5D91F97DBAE001CB60B /* Component */,
 				D47E87F91F9B5CEA000A8ADE /* Extension */,
+				D48595C21FA4FD0F009E9A37 /* Modal */,
 				D4C7F5D81F97DBA6001CB60B /* Screen */,
 				D47E87F71F9B5B5A000A8ADE /* Registrable.swift */,
 			);
@@ -331,6 +353,7 @@
 			files = (
 				D4F005091FA1199100A2418E /* ItemDetailScreenViewController.xib in Resources */,
 				D421BA7E1F99211800B492B0 /* ItemViewCell.xib in Resources */,
+				D48595C91FA4FEE0009E9A37 /* AuthorizeViewController.xib in Resources */,
 				D4E2379F1F91F1480058C4FC /* Assets.xcassets in Resources */,
 				D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */,
 				D40062961F92228D009E4FA9 /* HomeScreenViewController.xib in Resources */,
@@ -423,6 +446,7 @@
 				D4F005071FA1195B00A2418E /* ItemDetailScreenViewController.swift in Sources */,
 				D4D878C51FA4B3D500A40708 /* HomeScreenViewControllerModel.swift in Sources */,
 				D40062981F9222F0009E4FA9 /* HomeScreenViewController.swift in Sources */,
+				D48595C41FA4FD2C009E9A37 /* AuthorizeViewController.swift in Sources */,
 				D47E87F81F9B5B5A000A8ADE /* Registrable.swift in Sources */,
 				D47E87FB1F9B6012000A8ADE /* Registrable+Xib.swift in Sources */,
 				D421BA811F99317800B492B0 /* ItemViewCell.swift in Sources */,
