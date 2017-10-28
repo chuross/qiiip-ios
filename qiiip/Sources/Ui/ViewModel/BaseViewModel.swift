@@ -12,10 +12,4 @@ import RxSwift
 open class BaseViewModel: ViewModel {
     
     let disposeBag: DisposeBag = DisposeBag()
-    
-    func create() {
-    }
-    
-    func destroy() {
-    }
 }

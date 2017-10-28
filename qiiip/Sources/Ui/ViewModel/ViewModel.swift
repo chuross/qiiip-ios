@@ -12,8 +12,4 @@ import RxSwift
  protocol ViewModel {
     
     var disposeBag: DisposeBag { get }
-    
-    func create()
-    
-    func destroy()
 }

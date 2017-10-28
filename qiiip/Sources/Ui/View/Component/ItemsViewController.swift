@@ -93,9 +93,5 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
             })
             .addDisposableTo(viewModel.disposeBag)
     }
-    
-    deinit {
-        viewModel?.destroy()
-    }
 
 }
