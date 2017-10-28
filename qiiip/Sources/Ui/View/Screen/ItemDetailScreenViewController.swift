@@ -12,10 +12,10 @@ import WebKit
 import CHQiitaApiClient
 
 class ItemDetailScreenViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
-    
-    var webView: WKWebView!
+
+    @IBOutlet weak var webView: WKWebView!
     var item: Item!
-    
+
     init(item: Item) {
         super.init(nibName: nil, bundle: nil)
         self.item = item
