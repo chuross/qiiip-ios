@@ -25,7 +25,7 @@ open class PagerViewModel<I>: BaseViewModel {
         self.isLoading.value = true
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-        pagerSource(page: currentPage.value, limit: limit)
+        pagerSource(page: defaultPage, limit: limit)
             .do(onNext: { _ in self.currentPage.value = self.defaultPage })
             .subscribe(onSuccess: { list in
                 self.list.value = list
@@ -40,7 +40,7 @@ open class PagerViewModel<I>: BaseViewModel {
         self.isLoading.value = true
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-        pagerSource(page: currentPage.value, limit: limit)
+        pagerSource(page: currentPage.value + 1, limit: limit)
             .subscribe(onSuccess: { list in
                 self.list.value?.append(contentsOf: list)
             })

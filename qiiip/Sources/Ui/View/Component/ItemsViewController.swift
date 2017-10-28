@@ -51,6 +51,7 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
             .addDisposableTo(viewModel.disposeBag)
 
         dataSource = ItemViewCellDataSource()
+        dataSource?.loadMoreListener = { viewModel.fetchNext() }
         guard let dataSource = dataSource else { return }
 
         listView.refreshControl = refreshControl
