@@ -10,3 +10,10 @@ target 'qiiip' do
   pod 'XLPagerTabStrip', '~> 8.0'
   pod 'APAvatarImageView'
 end
+
+plugin 'cocoapods-keys', {
+  :project => "qiiip",
+  :keys => [
+    'QiitaClientId'
+  ]
+}
