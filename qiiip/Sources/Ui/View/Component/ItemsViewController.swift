@@ -72,11 +72,19 @@ class ItemsViewController: UIViewController, IndicatorInfoProvider {
             })
             .addDisposableTo(viewModel.disposeBag)
         
+        viewModel.isLoading.asObservable()
+            .filter({ !$0 })
+            .subscribeOn(AppDelegate.application().mainScheduler)
+            .observeOn(AppDelegate.application().mainScheduler)
+            .subscribe(onNext: { [weak self] _ in
+                self?.refreshControl.endRefreshing()
+            })
+            .addDisposableTo(viewModel.disposeBag)
+        
         viewModel.list.asObservable()
             .subscribeOn(AppDelegate.application().mainScheduler)
             .observeOn(AppDelegate.application().mainScheduler)
             .subscribe(onNext: { [weak self] items in
-                self?.refreshControl.endRefreshing()
                 guard let items = items else { return }
                 dataSource.items.removeAll()
                 dataSource.items.append(contentsOf: items)
