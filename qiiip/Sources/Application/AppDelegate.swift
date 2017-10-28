@@ -8,12 +8,14 @@
 
 import UIKit
 import RxSwift
+import Keys
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let mainScheduler: SchedulerType = MainScheduler.instance
     let concurrentScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
+    let configs: QiiipXcodeprojKeys = QiiipXcodeprojKeys()
     var window: UIWindow?
     var navigationController: UINavigationController?
     
@@ -36,10 +38,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.5450980392, green: 0.7647058824, blue: 0.2901960784, alpha: 1)
         navigationController?.navigationBar.tintColor = UIColor.white
         
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let queryItems = URLComponents(string: url.absoluteString)?.queryItems
+        if (url.host == "authorize") {
+            presentAuthorizeViewController(queryItems: queryItems)
+        }
+        return true
+    }
+    
+    private func presentAuthorizeViewController(queryItems: [URLQueryItem]?) {
+        guard let queryItems = queryItems else { return }
+        guard let code = queryItems.first(where: { $0.name == "code" })?.value else { return }
+        window?.rootViewController?.present(AuthorizeModalViewController(code: code), animated: true, completion: nil)
     }
     
     func pushScreen(nextViewController viewController: UIViewController) {

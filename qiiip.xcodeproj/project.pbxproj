@@ -20,8 +20,12 @@
 		D47E87FB1F9B6012000A8ADE /* Registrable+Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87FA1F9B6012000A8ADE /* Registrable+Xib.swift */; };
 		D47E87FD1F9B6A5D000A8ADE /* UITableView+Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87FC1F9B6A5D000A8ADE /* UITableView+Xib.swift */; };
 		D47E88031F9B72E6000A8ADE /* ItemViewCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E88021F9B72E6000A8ADE /* ItemViewCellDataSource.swift */; };
-		D48595C41FA4FD2C009E9A37 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48595C31FA4FD2C009E9A37 /* AuthorizeViewController.swift */; };
-		D48595C91FA4FEE0009E9A37 /* AuthorizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48595C81FA4FEE0009E9A37 /* AuthorizeViewController.xib */; };
+		D48595C41FA4FD2C009E9A37 /* AuthorizeModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48595C31FA4FD2C009E9A37 /* AuthorizeModalViewController.swift */; };
+		D48595C91FA4FEE0009E9A37 /* AuthorizeModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D48595C81FA4FEE0009E9A37 /* AuthorizeModalViewController.xib */; };
+		D48595CC1FA500F1009E9A37 /* AuthorizeModalViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48595CB1FA500F1009E9A37 /* AuthorizeModalViewControllerModel.swift */; };
+		D48595CF1FA5D919009E9A37 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48595CE1FA5D919009E9A37 /* Account.swift */; };
+		D4B5F2351FA63CE800861724 /* GlobalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5F2341FA63CE800861724 /* GlobalEvent.swift */; };
+		D4B5F2371FA63DF900861724 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5F2361FA63DF900861724 /* AccountService.swift */; };
 		D4C7F5DB1F97DBC1001CB60B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */; };
 		D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */; };
 		D4D878C51FA4B3D500A40708 /* HomeScreenViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D878C41FA4B3D500A40708 /* HomeScreenViewControllerModel.swift */; };
@@ -47,8 +51,12 @@
 		D47E87FA1F9B6012000A8ADE /* Registrable+Xib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Registrable+Xib.swift"; sourceTree = "<group>"; };
 		D47E87FC1F9B6A5D000A8ADE /* UITableView+Xib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Xib.swift"; sourceTree = "<group>"; };
 		D47E88021F9B72E6000A8ADE /* ItemViewCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewCellDataSource.swift; sourceTree = "<group>"; };
-		D48595C31FA4FD2C009E9A37 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
-		D48595C81FA4FEE0009E9A37 /* AuthorizeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizeViewController.xib; sourceTree = "<group>"; };
+		D48595C31FA4FD2C009E9A37 /* AuthorizeModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeModalViewController.swift; sourceTree = "<group>"; };
+		D48595C81FA4FEE0009E9A37 /* AuthorizeModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizeModalViewController.xib; sourceTree = "<group>"; };
+		D48595CB1FA500F1009E9A37 /* AuthorizeModalViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeModalViewControllerModel.swift; sourceTree = "<group>"; };
+		D48595CE1FA5D919009E9A37 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		D4B5F2341FA63CE800861724 /* GlobalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEvent.swift; sourceTree = "<group>"; };
+		D4B5F2361FA63DF900861724 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsViewController.xib; sourceTree = "<group>"; };
 		D4D878C41FA4B3D500A40708 /* HomeScreenViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewControllerModel.swift; sourceTree = "<group>"; };
@@ -84,6 +92,7 @@
 		D400628F1F92012F009E4FA9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D48595CD1FA5D907009E9A37 /* Domain */,
 				D40062931F92031E009E4FA9 /* Application */,
 				D40062941F920331009E4FA9 /* Ui */,
 			);
@@ -114,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				D4E237971F91F1480058C4FC /* AppDelegate.swift */,
+				D4B5F2341FA63CE800861724 /* GlobalEvent.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -189,7 +199,7 @@
 		D48595C21FA4FD0F009E9A37 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				D48595C31FA4FD2C009E9A37 /* AuthorizeViewController.swift */,
+				D48595C31FA4FD2C009E9A37 /* AuthorizeModalViewController.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -197,9 +207,26 @@
 		D48595C51FA4FE2A009E9A37 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				D48595C81FA4FEE0009E9A37 /* AuthorizeViewController.xib */,
+				D48595C81FA4FEE0009E9A37 /* AuthorizeModalViewController.xib */,
 			);
 			path = Modal;
+			sourceTree = "<group>";
+		};
+		D48595CA1FA50099009E9A37 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				D48595CB1FA500F1009E9A37 /* AuthorizeModalViewControllerModel.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		D48595CD1FA5D907009E9A37 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D48595CE1FA5D919009E9A37 /* Account.swift */,
+				D4B5F2361FA63DF900861724 /* AccountService.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		D4C7F5D31F97B7C8001CB60B /* View */ = {
@@ -219,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				D404EEFA1F98E644003F05AA /* Component */,
+				D48595CA1FA50099009E9A37 /* Modal */,
 				D4D878C31FA4B3BC00A40708 /* Screen */,
 				D404EEFD1F98E8FB003F05AA /* BaseViewModel.swift */,
 				D404EEFB1F98E875003F05AA /* PagerViewModel.swift */,
@@ -353,7 +381,7 @@
 			files = (
 				D4F005091FA1199100A2418E /* ItemDetailScreenViewController.xib in Resources */,
 				D421BA7E1F99211800B492B0 /* ItemViewCell.xib in Resources */,
-				D48595C91FA4FEE0009E9A37 /* AuthorizeViewController.xib in Resources */,
+				D48595C91FA4FEE0009E9A37 /* AuthorizeModalViewController.xib in Resources */,
 				D4E2379F1F91F1480058C4FC /* Assets.xcassets in Resources */,
 				D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */,
 				D40062961F92228D009E4FA9 /* HomeScreenViewController.xib in Resources */,
@@ -391,6 +419,7 @@
 				"${BUILT_PRODUCTS_DIR}/APAvatarImageView/APAvatarImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CHQiitaApiClient/CHQiitaApiClient.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -402,6 +431,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APAvatarImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHQiitaApiClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -443,13 +473,17 @@
 				D404EEF71F98E4C4003F05AA /* ViewModel.swift in Sources */,
 				D47E88031F9B72E6000A8ADE /* ItemViewCellDataSource.swift in Sources */,
 				D404EEFC1F98E875003F05AA /* PagerViewModel.swift in Sources */,
+				D48595CC1FA500F1009E9A37 /* AuthorizeModalViewControllerModel.swift in Sources */,
 				D4F005071FA1195B00A2418E /* ItemDetailScreenViewController.swift in Sources */,
+				D4B5F2371FA63DF900861724 /* AccountService.swift in Sources */,
 				D4D878C51FA4B3D500A40708 /* HomeScreenViewControllerModel.swift in Sources */,
+				D48595CF1FA5D919009E9A37 /* Account.swift in Sources */,
 				D40062981F9222F0009E4FA9 /* HomeScreenViewController.swift in Sources */,
-				D48595C41FA4FD2C009E9A37 /* AuthorizeViewController.swift in Sources */,
+				D48595C41FA4FD2C009E9A37 /* AuthorizeModalViewController.swift in Sources */,
 				D47E87F81F9B5B5A000A8ADE /* Registrable.swift in Sources */,
 				D47E87FB1F9B6012000A8ADE /* Registrable+Xib.swift in Sources */,
 				D421BA811F99317800B492B0 /* ItemViewCell.swift in Sources */,
+				D4B5F2351FA63CE800861724 /* GlobalEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
