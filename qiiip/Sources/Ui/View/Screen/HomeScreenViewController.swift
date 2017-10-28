@@ -26,9 +26,10 @@ class HomeScreenViewController: TwitterPagerTabStripViewController {
         navigationItem.leftBarButtonItem = accountButton
         
         accountButton.rx.tap
-            .subscribe(onNext: { print("tap") })
+            .subscribeOn(AppDelegate.application().mainScheduler)
+            .observeOn(AppDelegate.application().mainScheduler)
+            .subscribe(onNext: { [weak self] in /* todo */ })
             .addDisposableTo(viewModel.disposeBag)
-        
     }
 
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
