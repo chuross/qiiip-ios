@@ -196,8 +196,8 @@
 		D4C7F5D41F97B7D1001CB60B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D4D878C31FA4B3BC00A40708 /* Screen */,
 				D404EEFA1F98E644003F05AA /* Component */,
+				D4D878C31FA4B3BC00A40708 /* Screen */,
 				D404EEFD1F98E8FB003F05AA /* BaseViewModel.swift */,
 				D404EEFB1F98E875003F05AA /* PagerViewModel.swift */,
 				D404EEF61F98E4C4003F05AA /* ViewModel.swift */,
