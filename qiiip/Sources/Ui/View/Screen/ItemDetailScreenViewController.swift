@@ -14,6 +14,9 @@ import CHQiitaApiClient
 class ItemDetailScreenViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 
     @IBOutlet weak var webView: WKWebView!
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     var item: Item!
 
     init(item: Item) {

@@ -50,6 +50,10 @@ class AccountService {
             })
     }
     
+    func logout() {
+        
+    }
+    
     private func saveAccount(account: Account) {
         let userData = [
             accountUserIdKey: account.user.id,

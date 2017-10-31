@@ -26,6 +26,9 @@
 		D48595CF1FA5D919009E9A37 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48595CE1FA5D919009E9A37 /* Account.swift */; };
 		D4B5F2351FA63CE800861724 /* GlobalEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5F2341FA63CE800861724 /* GlobalEvent.swift */; };
 		D4B5F2371FA63DF900861724 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B5F2361FA63DF900861724 /* AccountService.swift */; };
+		D4C355F31FA8E43D00AEDDB7 /* MenuViewModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C355F21FA8E43D00AEDDB7 /* MenuViewModalController.swift */; };
+		D4C355F91FA8F9E100AEDDB7 /* SimpleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C355F81FA8F9E100AEDDB7 /* SimpleViewModel.swift */; };
+		D4C356001FA9014500AEDDB7 /* UINavigationController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C355FF1FA9014500AEDDB7 /* UINavigationController+StatusBar.swift */; };
 		D4C7F5DB1F97DBC1001CB60B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */; };
 		D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */; };
 		D4D878C51FA4B3D500A40708 /* HomeScreenViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D878C41FA4B3D500A40708 /* HomeScreenViewControllerModel.swift */; };
@@ -57,6 +60,9 @@
 		D48595CE1FA5D919009E9A37 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		D4B5F2341FA63CE800861724 /* GlobalEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEvent.swift; sourceTree = "<group>"; };
 		D4B5F2361FA63DF900861724 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		D4C355F21FA8E43D00AEDDB7 /* MenuViewModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModalController.swift; sourceTree = "<group>"; };
+		D4C355F81FA8F9E100AEDDB7 /* SimpleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewModel.swift; sourceTree = "<group>"; };
+		D4C355FF1FA9014500AEDDB7 /* UINavigationController+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBar.swift"; sourceTree = "<group>"; };
 		D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemsViewController.xib; sourceTree = "<group>"; };
 		D4D878C41FA4B3D500A40708 /* HomeScreenViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewControllerModel.swift; sourceTree = "<group>"; };
@@ -92,8 +98,8 @@
 		D400628F1F92012F009E4FA9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D48595CD1FA5D907009E9A37 /* Domain */,
 				D40062931F92031E009E4FA9 /* Application */,
+				D48595CD1FA5D907009E9A37 /* Domain */,
 				D40062941F920331009E4FA9 /* Ui */,
 			);
 			path = Sources;
@@ -184,6 +190,7 @@
 			children = (
 				D47E87FA1F9B6012000A8ADE /* Registrable+Xib.swift */,
 				D47E87FC1F9B6A5D000A8ADE /* UITableView+Xib.swift */,
+				D4C355FF1FA9014500AEDDB7 /* UINavigationController+StatusBar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -200,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				D48595C31FA4FD2C009E9A37 /* AuthorizeModalViewController.swift */,
+				D4C355F21FA8E43D00AEDDB7 /* MenuViewModalController.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -250,6 +258,7 @@
 				D4D878C31FA4B3BC00A40708 /* Screen */,
 				D404EEFD1F98E8FB003F05AA /* BaseViewModel.swift */,
 				D404EEFB1F98E875003F05AA /* PagerViewModel.swift */,
+				D4C355F81FA8F9E100AEDDB7 /* SimpleViewModel.swift */,
 				D404EEF61F98E4C4003F05AA /* ViewModel.swift */,
 			);
 			path = ViewModel;
@@ -419,6 +428,7 @@
 				"${BUILT_PRODUCTS_DIR}/APAvatarImageView/APAvatarImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CHQiitaApiClient/CHQiitaApiClient.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -431,6 +441,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APAvatarImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHQiitaApiClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -476,6 +487,9 @@
 				D48595CC1FA500F1009E9A37 /* AuthorizeModalViewControllerModel.swift in Sources */,
 				D4F005071FA1195B00A2418E /* ItemDetailScreenViewController.swift in Sources */,
 				D4B5F2371FA63DF900861724 /* AccountService.swift in Sources */,
+				D4C356001FA9014500AEDDB7 /* UINavigationController+StatusBar.swift in Sources */,
+				D4C355F91FA8F9E100AEDDB7 /* SimpleViewModel.swift in Sources */,
+				D4C355F31FA8E43D00AEDDB7 /* MenuViewModalController.swift in Sources */,
 				D4D878C51FA4B3D500A40708 /* HomeScreenViewControllerModel.swift in Sources */,
 				D48595CF1FA5D919009E9A37 /* Account.swift in Sources */,
 				D40062981F9222F0009E4FA9 /* HomeScreenViewController.swift in Sources */,

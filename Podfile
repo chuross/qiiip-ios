@@ -10,6 +10,7 @@ target 'qiiip' do
   pod 'SDWebImage', '~> 4.1'
   pod 'XLPagerTabStrip', '~> 8.0'
   pod 'APAvatarImageView'
+  pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka', :branch => 'feature/Xcode9-Swift3_2'
 end
 
 plugin 'cocoapods-keys', {

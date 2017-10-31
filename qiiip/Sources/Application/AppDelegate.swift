@@ -9,15 +9,23 @@
 import UIKit
 import RxSwift
 import Keys
+import CHQiitaApiClient
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     let mainScheduler: SchedulerType = MainScheduler.instance
     let concurrentScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
     let configs: QiiipXcodeprojKeys = QiiipXcodeprojKeys()
+    var account: Account? {
+        get {
+            return accountService.account()
+        }
+    }
     var window: UIWindow?
     var navigationController: UINavigationController?
+    private let accountService: AccountService = AccountService()
     
     public static func statusBarHeight() -> CGFloat {
         return UIApplication.shared.statusBarFrame.size.height
@@ -34,6 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        if let account = account {
+            CHQiitaApiClientAPI.customHeaders["Authorization"] = "Bearer \(account.token)"
+        }
+    
         navigationController = UINavigationController(rootViewController: HomeScreenViewController())
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.5450980392, green: 0.7647058824, blue: 0.2901960784, alpha: 1)
         navigationController?.navigationBar.tintColor = UIColor.white
