@@ -17,11 +17,11 @@ class AccountService {
     private let accountUserKey: String = "account_user"
     private let accountUserIdKey: String = "user_id"
     private let accountUserThumbnailKey: String = "user_thumbnail"
-    private let accountToken: String = "account_token"
+    private let accountTokenKey: String = "account_token"
     
     func account() -> Account? {
         guard let userData = UserDefaults.standard.dictionary(forKey: accountUserKey) as? [String:String] else { return nil }
-        guard let token = keychain[accountToken] else { return nil }
+        guard let token = keychain[accountTokenKey] else { return nil }
         
         let user = User(
             id: userData[accountUserIdKey]!,
@@ -51,7 +51,8 @@ class AccountService {
     }
     
     func logout() {
-        
+        UserDefaults.standard.removeObject(forKey: accountUserKey)
+        try? keychain.remove(accountTokenKey)
     }
     
     private func saveAccount(account: Account) {
@@ -61,6 +62,6 @@ class AccountService {
         ]
         
         UserDefaults.standard.set(userData, forKey: accountUserKey)
-        keychain[accountToken] = account.token
+        keychain[accountTokenKey] = account.token
     }
 }

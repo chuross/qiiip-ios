@@ -70,6 +70,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController?.present(AuthorizeModalViewController(code: code), animated: true, completion: nil)
     }
     
+    func logout() {
+        accountService.logout()
+    }
+    
     func pushScreen(nextViewController viewController: UIViewController) {
         navigationController?.pushViewController(viewController, animated: true)
     }

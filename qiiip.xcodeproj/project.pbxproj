@@ -16,6 +16,7 @@
 		D404EEFE1F98E8FB003F05AA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D404EEFD1F98E8FB003F05AA /* BaseViewModel.swift */; };
 		D421BA7E1F99211800B492B0 /* ItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D421BA7D1F99211800B492B0 /* ItemViewCell.xib */; };
 		D421BA811F99317800B492B0 /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421BA801F99317800B492B0 /* ItemViewCell.swift */; };
+		D429D5A91FABFF0000F75D43 /* MenuModalViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D429D5A81FABFF0000F75D43 /* MenuModalViewControllerModel.swift */; };
 		D47E87F81F9B5B5A000A8ADE /* Registrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87F71F9B5B5A000A8ADE /* Registrable.swift */; };
 		D47E87FB1F9B6012000A8ADE /* Registrable+Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87FA1F9B6012000A8ADE /* Registrable+Xib.swift */; };
 		D47E87FD1F9B6A5D000A8ADE /* UITableView+Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87FC1F9B6A5D000A8ADE /* UITableView+Xib.swift */; };
@@ -50,6 +51,7 @@
 		D404EEFD1F98E8FB003F05AA /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		D421BA7D1F99211800B492B0 /* ItemViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemViewCell.xib; sourceTree = "<group>"; };
 		D421BA801F99317800B492B0 /* ItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
+		D429D5A81FABFF0000F75D43 /* MenuModalViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModalViewControllerModel.swift; sourceTree = "<group>"; };
 		D47E87F71F9B5B5A000A8ADE /* Registrable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registrable.swift; sourceTree = "<group>"; };
 		D47E87FA1F9B6012000A8ADE /* Registrable+Xib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Registrable+Xib.swift"; sourceTree = "<group>"; };
 		D47E87FC1F9B6A5D000A8ADE /* UITableView+Xib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Xib.swift"; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				D48595CB1FA500F1009E9A37 /* AuthorizeModalViewControllerModel.swift */,
+				D429D5A81FABFF0000F75D43 /* MenuModalViewControllerModel.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				D404EEF91F98E640003F05AA /* ItemsViewControllerModel.swift in Sources */,
 				D404EEFE1F98E8FB003F05AA /* BaseViewModel.swift in Sources */,
 				D47E87FD1F9B6A5D000A8ADE /* UITableView+Xib.swift in Sources */,
+				D429D5A91FABFF0000F75D43 /* MenuModalViewControllerModel.swift in Sources */,
 				D404EEF71F98E4C4003F05AA /* ViewModel.swift in Sources */,
 				D47E88031F9B72E6000A8ADE /* ItemViewCellDataSource.swift in Sources */,
 				D404EEFC1F98E875003F05AA /* PagerViewModel.swift in Sources */,
