@@ -23,7 +23,7 @@ class AuthorizeModalViewControllerModel: BaseViewModel {
     
     func login() {
         accountService.login(code: code)
-            .subscribeOn(AppDelegate.application().concurrentScheduler)
+            .subscribeOn(AppDelegate.application().backgroundScheduler)
             .observeOn(CurrentThreadScheduler.instance)
             .subscribe(onNext: { account in
                 GlobalEvent.loginChangeEvent.onNext(account)

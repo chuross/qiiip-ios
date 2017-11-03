@@ -50,7 +50,7 @@ open class PagerViewModel<I>: BaseViewModel {
     
     private func pagerSource(page: Int32, limit: Int32) -> Single<[I]> {
         return source(currentPage: page, limit: limit)
-            .subscribeOn(AppDelegate.application().concurrentScheduler)
+            .subscribeOn(AppDelegate.application().backgroundScheduler)
             .observeOn(CurrentThreadScheduler.instance)
             .do(onCompleted: { () in
                 self.isLoading.value = false

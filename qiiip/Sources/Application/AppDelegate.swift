@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
     let mainScheduler: SchedulerType = MainScheduler.instance
-    let concurrentScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global())
+    let backgroundScheduler: SchedulerType = SerialDispatchQueueScheduler(qos: DispatchQoS.background)
     let configs: QiiipXcodeprojKeys = QiiipXcodeprojKeys()
     var account: Account? {
         get {
