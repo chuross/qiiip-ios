@@ -16,6 +16,7 @@ class HomeScreenViewController: TwitterPagerTabStripViewController {
     
     private let viewModel: HomeScreenViewControllerModel = HomeScreenViewControllerModel()
     private let accountService: AccountService = AccountService()
+    private var tabViewControllers: [UIViewController] = []
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -39,10 +40,27 @@ class HomeScreenViewController: TwitterPagerTabStripViewController {
                 self?.present(UINavigationController(rootViewController: MenuModalViewController()), animated: true, completion: nil)
             })
             .addDisposableTo(viewModel.disposeBag)
-
+        
+        viewModel.loginChangeEvent
+            .subscribeOn(AppDelegate.application().mainScheduler)
+            .observeOn(AppDelegate.application().mainScheduler)
+            .subscribe(onNext: { [weak self] account in
+                self?.setupTabViewControllers()
+                self?.reloadPagerTabStripView()
+            })
+            .addDisposableTo(viewModel.disposeBag)
     }
 
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        return [ItemsViewController()]
+        setupTabViewControllers()
+        return tabViewControllers
+    }
+    
+    private func setupTabViewControllers() {
+        if let account = AppDelegate.application().account {
+            tabViewControllers = [ItemsViewController(), StockItemsViewController(userId: account.user.id)]
+        } else {
+            tabViewControllers = [ItemsViewController()]
+        }
     }
 }

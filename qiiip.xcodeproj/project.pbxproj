@@ -17,6 +17,9 @@
 		D421BA7E1F99211800B492B0 /* ItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D421BA7D1F99211800B492B0 /* ItemViewCell.xib */; };
 		D421BA811F99317800B492B0 /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D421BA801F99317800B492B0 /* ItemViewCell.swift */; };
 		D429D5A91FABFF0000F75D43 /* MenuModalViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D429D5A81FABFF0000F75D43 /* MenuModalViewControllerModel.swift */; };
+		D429D5AB1FAC01ED00F75D43 /* StockItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D429D5AA1FAC01ED00F75D43 /* StockItemsViewController.swift */; };
+		D429D5AE1FAC072B00F75D43 /* StockItemViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D429D5AD1FAC072B00F75D43 /* StockItemViewControllerModel.swift */; };
+		D429D5B01FAC0C7D00F75D43 /* StockItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D429D5AF1FAC0C7D00F75D43 /* StockItemsViewController.xib */; };
 		D47E87F81F9B5B5A000A8ADE /* Registrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87F71F9B5B5A000A8ADE /* Registrable.swift */; };
 		D47E87FB1F9B6012000A8ADE /* Registrable+Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87FA1F9B6012000A8ADE /* Registrable+Xib.swift */; };
 		D47E87FD1F9B6A5D000A8ADE /* UITableView+Xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E87FC1F9B6A5D000A8ADE /* UITableView+Xib.swift */; };
@@ -52,6 +55,9 @@
 		D421BA7D1F99211800B492B0 /* ItemViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemViewCell.xib; sourceTree = "<group>"; };
 		D421BA801F99317800B492B0 /* ItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
 		D429D5A81FABFF0000F75D43 /* MenuModalViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModalViewControllerModel.swift; sourceTree = "<group>"; };
+		D429D5AA1FAC01ED00F75D43 /* StockItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockItemsViewController.swift; sourceTree = "<group>"; };
+		D429D5AD1FAC072B00F75D43 /* StockItemViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockItemViewControllerModel.swift; sourceTree = "<group>"; };
+		D429D5AF1FAC0C7D00F75D43 /* StockItemsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockItemsViewController.xib; sourceTree = "<group>"; };
 		D47E87F71F9B5B5A000A8ADE /* Registrable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registrable.swift; sourceTree = "<group>"; };
 		D47E87FA1F9B6012000A8ADE /* Registrable+Xib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Registrable+Xib.swift"; sourceTree = "<group>"; };
 		D47E87FC1F9B6A5D000A8ADE /* UITableView+Xib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Xib.swift"; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				D404EEF81F98E640003F05AA /* ItemsViewControllerModel.swift */,
+				D429D5AD1FAC072B00F75D43 /* StockItemViewControllerModel.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -166,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				D4C7F5DC1F97DCAA001CB60B /* ItemsViewController.xib */,
+				D429D5AF1FAC0C7D00F75D43 /* StockItemsViewController.xib */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -280,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				D4C7F5DA1F97DBC1001CB60B /* ItemsViewController.swift */,
+				D429D5AA1FAC01ED00F75D43 /* StockItemsViewController.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -396,6 +405,7 @@
 				D48595C91FA4FEE0009E9A37 /* AuthorizeModalViewController.xib in Resources */,
 				D4E2379F1F91F1480058C4FC /* Assets.xcassets in Resources */,
 				D4C7F5DD1F97DCAA001CB60B /* ItemsViewController.xib in Resources */,
+				D429D5B01FAC0C7D00F75D43 /* StockItemsViewController.xib in Resources */,
 				D40062961F92228D009E4FA9 /* HomeScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,12 +497,14 @@
 				D429D5A91FABFF0000F75D43 /* MenuModalViewControllerModel.swift in Sources */,
 				D404EEF71F98E4C4003F05AA /* ViewModel.swift in Sources */,
 				D47E88031F9B72E6000A8ADE /* ItemViewCellDataSource.swift in Sources */,
+				D429D5AE1FAC072B00F75D43 /* StockItemViewControllerModel.swift in Sources */,
 				D404EEFC1F98E875003F05AA /* PagerViewModel.swift in Sources */,
 				D48595CC1FA500F1009E9A37 /* AuthorizeModalViewControllerModel.swift in Sources */,
 				D4F005071FA1195B00A2418E /* ItemDetailScreenViewController.swift in Sources */,
 				D4B5F2371FA63DF900861724 /* AccountService.swift in Sources */,
 				D4C356001FA9014500AEDDB7 /* UINavigationController+StatusBar.swift in Sources */,
 				D4C355F91FA8F9E100AEDDB7 /* SimpleViewModel.swift in Sources */,
+				D429D5AB1FAC01ED00F75D43 /* StockItemsViewController.swift in Sources */,
 				D4C355F31FA8E43D00AEDDB7 /* MenuModalViewController.swift in Sources */,
 				D4D878C51FA4B3D500A40708 /* HomeScreenViewControllerModel.swift in Sources */,
 				D48595CF1FA5D919009E9A37 /* Account.swift in Sources */,
