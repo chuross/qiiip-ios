@@ -36,9 +36,7 @@ class HomeScreenViewController: TwitterPagerTabStripViewController {
             .subscribeOn(AppDelegate.application().mainScheduler)
             .observeOn(AppDelegate.application().mainScheduler)
             .subscribe(onNext: { [weak self] _ in
-                self?.present(UINavigationController(rootViewController: MenuViewModalController()), animated: true, completion: nil)
-//                guard let viewModel = self?.viewModel else { return }
-//                UIApplication.shared.open(viewModel.authUrl, options: [:], completionHandler: nil)
+                self?.present(UINavigationController(rootViewController: MenuModalViewController()), animated: true, completion: nil)
             })
             .addDisposableTo(viewModel.disposeBag)
 

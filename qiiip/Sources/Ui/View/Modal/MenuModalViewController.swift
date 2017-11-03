@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Eureka
 
-class MenuViewModalController: FormViewController {
+class MenuModalViewController: FormViewController {
 
     private let viewModel: MenuModalViewControllerModel = MenuModalViewControllerModel()
     private let accountService: AccountService = AccountService()
