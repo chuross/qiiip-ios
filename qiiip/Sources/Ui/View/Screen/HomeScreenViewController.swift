@@ -30,8 +30,11 @@ class HomeScreenViewController: TwitterPagerTabStripViewController {
             automaticallyAdjustsScrollViewInsets = false
         }
         
-        let menuButton = UIBarButtonItem(image: #imageLiteral(resourceName: "Menu"), style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        let menuButton = UIBarButtonItem(image: #imageLiteral(resourceName: "Menu"), style: .plain, target: nil, action: nil)
         navigationItem.leftBarButtonItem = menuButton
+        
+        let searchButton = UIBarButtonItem(image: #imageLiteral(resourceName: "Search"), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = searchButton
         
         menuButton.rx.tap
             .subscribeOn(AppDelegate.application().mainScheduler)
@@ -39,6 +42,12 @@ class HomeScreenViewController: TwitterPagerTabStripViewController {
             .subscribe(onNext: { [weak self] _ in
                 self?.present(UINavigationController(rootViewController: MenuModalViewController()), animated: true, completion: nil)
             })
+            .addDisposableTo(viewModel.disposeBag)
+        
+        searchButton.rx.tap
+            .subscribeOn(AppDelegate.application().mainScheduler)
+            .observeOn(AppDelegate.application().mainScheduler)
+            .subscribe(onNext: { _ in  })
             .addDisposableTo(viewModel.disposeBag)
         
         viewModel.loginChangeEvent
