@@ -372,7 +372,7 @@
 				TargetAttributes = {
 					D4E237931F91F1480058C4FC = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = Q77F4F4ZQG;
+						DevelopmentTeam = 6K8A4G9ZWT;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -618,7 +618,7 @@
 			baseConfigurationReference = 26CF66ABB6B579E7DC3D221A /* Pods-qiiip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Q77F4F4ZQG;
+				DEVELOPMENT_TEAM = 6K8A4G9ZWT;
 				INFOPLIST_FILE = qiiip/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -633,7 +633,7 @@
 			baseConfigurationReference = 9255220648B712EC0DDB81AF /* Pods-qiiip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Q77F4F4ZQG;
+				DEVELOPMENT_TEAM = 6K8A4G9ZWT;
 				INFOPLIST_FILE = qiiip/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
